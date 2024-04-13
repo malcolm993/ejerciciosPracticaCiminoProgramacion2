@@ -21,6 +21,7 @@ public class Principal {
         Persona p1 = new  Persona("santiago", "lopez", "45454545", dom1);
         Persona p2 = new  Persona("julian", "gomez", "898989", dom2);
         Persona p3 = new Persona("roberto", "Gonzales", "656565", dom3);
+        Persona p4 = new Persona("julio", "ramirez", "45454545", dom3);
         
         Agenda a1 = new Agenda();
         
@@ -28,6 +29,12 @@ public class Principal {
         a1.agregarPersona(p2);
         a1.agregarPersona(p3);
         
+        a1.listarAgenda();
+        System.out.println("");
+        System.out.println(a1.ulitmoDeAgenda());
+        
+        System.out.println( "se puede agregar a la persona 4? :"+ a1.agregarPersona(p4));
+         
         a1.listarAgenda();
         System.out.println("");
         System.out.println(a1.ulitmoDeAgenda());

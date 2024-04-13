@@ -25,12 +25,30 @@ public class Agenda {
         }
     }
         
-    public void agregarPersona(Persona a){
-        agendaPersonas.add(a);
+    public boolean agregarPersona(Persona a){
+        
+        boolean aux = false;
+        if (verificarPersonaDni(a)){
+            agendaPersonas.add(a);
+            aux = true;
+        }
+        return aux;
     }
 
     public Persona ulitmoDeAgenda(){
         return agendaPersonas.get(agendaPersonas.size()-1);
+    }
+    
+    private boolean verificarPersonaDni (Persona x){
+        boolean aux = true;
+        for (Persona personaaux : agendaPersonas) {
+            //System.out.println("entro a la funcion verificarPersonaDni dentro de for each ");
+            if(personaaux.getDni().equals(x.getDni())){
+                //System.out.println("entro a la funcion verificarPersonaDni dentro de if ");
+                aux = false;
+            }
+        }
+        return aux;
     }
 }
     

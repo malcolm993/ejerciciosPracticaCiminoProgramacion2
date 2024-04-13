@@ -10,10 +10,10 @@ package guia2.ej1;
  */
 public class Persona {
     
-    String nombre;
-    String apellido;
-    String dni;
-    Domicilio dom;
+    private String nombre;
+    private String apellido;
+    private String dni;
+    private Domicilio dom;
 
     public Persona(String nombre, String apellido, String dni, Domicilio x) {
         this.nombre = nombre;
@@ -21,6 +21,12 @@ public class Persona {
         this.dni = dni;
         this.dom = x;
     }
+
+    public String getDni() {
+        return dni;
+    }
+    
+    
 
     @Override
     public String toString() {
