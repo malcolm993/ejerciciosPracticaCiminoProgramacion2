@@ -56,7 +56,6 @@ public class Agenda {
     public Persona removerPersona (String dniEliminar){
         Persona aux = null;
         int cont=0;
-        while()
         return aux;
     }
 }
