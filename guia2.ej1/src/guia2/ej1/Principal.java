@@ -38,6 +38,10 @@ public class Principal {
         a1.listarAgenda();
         System.out.println("");
         System.out.println(a1.ulitmoDeAgenda());
+        
+        a1.removerPersona("656565");
+        a1.listarAgenda();
+        
     }
     
 }

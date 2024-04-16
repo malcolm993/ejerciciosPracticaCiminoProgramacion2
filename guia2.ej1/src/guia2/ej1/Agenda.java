@@ -28,7 +28,7 @@ public class Agenda {
     public boolean agregarPersona(Persona a){
         
         boolean aux = false;
-        if (verificarPersonaDni(a)){
+        if (verificarPersonaDni(a) == null){
             agendaPersonas.add(a);
             aux = true;
         }
@@ -39,15 +39,24 @@ public class Agenda {
         return agendaPersonas.get(agendaPersonas.size()-1);
     }
     
-    private boolean verificarPersonaDni (Persona x){
-        boolean aux = true;
+    private Persona verificarPersonaDni (Persona x){
+        Persona aux = null;
         for (Persona personaaux : agendaPersonas) {
             //System.out.println("entro a la funcion verificarPersonaDni dentro de for each ");
             if(personaaux.getDni().equals(x.getDni())){
                 //System.out.println("entro a la funcion verificarPersonaDni dentro de if ");
-                aux = false;
+                aux = x;
             }
         }
+        return aux;
+    }
+    private int cantidadDePersonasEnAgenda(){
+        return agendaPersonas.size();
+    }
+    public Persona removerPersona (String dniEliminar){
+        Persona aux = null;
+        int cont=0;
+        while()
         return aux;
     }
 }
