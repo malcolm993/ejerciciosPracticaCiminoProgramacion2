@@ -53,6 +53,10 @@ public class Fecha {
     }
     
     public void sumarMes(){
+        if (mes == 12){
+            mes = 1;
+        }
         mes++;
+        
     }
 }
