@@ -54,9 +54,25 @@ public class Agenda {
         return agendaPersonas.size();
     }
     public Persona removerPersona (String dniEliminar){
-        Persona aux = null;
-        int cont=0;
+        Persona aux = buscarPorDni(dniEliminar);
         return aux;
+    }
+    
+    private int cantidadPeronasAgenda (){                
+        return agendaPersonas.size();
+    }
+    
+    public Persona buscarPorDni (String dniBuscado){
+        Persona personaEncontrado = null;
+        int a=0;
+        while ( a <= cantidadDePersonasEnAgenda() && personaEncontrado == null ){
+            
+            if (dniBuscado.equalsIgnoreCase(agendaPersonas.get(a).getDni())){
+                personaEncontrado = agendaPersonas.get(a);
+            }
+            a++;
+        }
+        return  personaEncontrado;
     }
 }
     

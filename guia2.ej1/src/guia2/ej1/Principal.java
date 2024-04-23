@@ -39,8 +39,10 @@ public class Principal {
         System.out.println("");
         System.out.println(a1.ulitmoDeAgenda());
         
-        a1.removerPersona("656565");
-        a1.listarAgenda();
+//        a1.removerPersona("45454545");
+//        a1.listarAgenda();
+        
+        System.out.println("dni encontrado:" + a1.buscarPorDni("45454545"));
         
     }
     
