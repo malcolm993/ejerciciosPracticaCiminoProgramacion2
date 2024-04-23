@@ -25,7 +25,13 @@ public class Persona {
     public String getDni() {
         return dni;
     }
-    
+
+    public void setDom(Domicilio dom) {
+        this.dom = dom;
+    }
+    public String getBarrioPersona(){
+        return dom.getBarrio();
+    }
     
 
     @Override

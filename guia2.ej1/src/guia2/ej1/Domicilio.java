@@ -10,19 +10,23 @@ package guia2.ej1;
  */
 public class Domicilio {
     
-    String ciudad;
-    String calle;
-    String altura;
+    private String barrio;
+    private String calle;
+    private String altura;
 
-    public Domicilio(String ciudad, String calle, String altura) {
-        this.ciudad = ciudad;
+    public Domicilio(String barrio, String calle, String altura) {
+        this.barrio = barrio;
         this.calle = calle;
         this.altura = altura;
     }
 
+    public String getBarrio() {
+        return barrio;
+    }
+    
     @Override
     public String toString() {
-        return "Domicilio{" + "ciudad=" + ciudad + ", calle=" + calle + ", altura=" + altura + '}';
+        return "Domicilio{" + "barrio=" + barrio + ", calle=" + calle + ", altura=" + altura + '}';
     }
     
     

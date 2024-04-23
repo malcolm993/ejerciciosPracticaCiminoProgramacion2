@@ -74,6 +74,27 @@ public class Agenda {
         }
         return  personaEncontrado;
     }
+    
+    public boolean modificaDomicilio (String dniCambioDom, Domicilio x){
+        boolean aux= false;
+        Persona p1=buscarPorDni(dniCambioDom);
+        if (p1 != null){
+            aux = true;
+            p1.setDom(x);
+        }
+        return aux;                 
+    }
+    
+    public ArrayList<Persona> obtenerPorBarrio(String barrio){
+        ArrayList<Persona> auxPersonaBarrio = new ArrayList<>();
+        for (Persona p : auxPersonaBarrio) {
+            if(p.getBarrioPersona().equalsIgnoreCase(barrio)){
+                auxPersonaBarrio.add(p);
+            }
+        }
+        
+        return auxPersonaBarrio;
+    }
 }
     
 
