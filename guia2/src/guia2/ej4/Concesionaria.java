@@ -9,12 +9,22 @@ import java.util.ArrayList;
  */
 public class Concesionaria {
 
-    String nombreConcesionaria;
+    private String nombreConcesionaria;
     private ArrayList<Automovil> listaAutmoviles;
 
     public ArrayList<Automovil> mostrarVehiculos(TipoDeAutomovil tipodeautomovil1) {
-        // Método a resolver...
-        return null;
+        ArrayList<Automovil> listaAux = new ArrayList<>();
+        for (Automovil a : listaAutmoviles) {
+            if( a.getTipo().equals(tipodeautomovil1)){
+                listaAux.add(a);
+                
+            }
+        }
+        return listaAux;
     }
+    public ArrayList<Automovil> mostrarVehiculos(){      
+        return listaAutmoviles;
+    }
+    
 
 }

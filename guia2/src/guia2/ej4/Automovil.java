@@ -7,8 +7,33 @@ package guia2.ej4;
  */
 public class Automovil {
 
-    String patente;
-    double precio;
+    private String patente;
+    private double precio;
     private TipoDeAutomovil tipo;
 
+    public Automovil(String patente, double precio, TipoDeAutomovil tipo) {
+        this.patente = patente;
+        this.precio = precio;
+        this.tipo = tipo;
+    }
+
+    public String getPatente() {
+        return patente;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public TipoDeAutomovil getTipo() {
+        return tipo;
+    }
+
+    @Override
+    public String toString() {
+        return "Automovil{" + "patente=" + patente + ", precio=" + precio + ", tipo=" + tipo + '}';
+    }
+    
+
+    
 }
