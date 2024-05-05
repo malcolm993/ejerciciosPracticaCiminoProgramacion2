@@ -14,35 +14,35 @@ public class Inmobiliaria {
     public Inmobiliaria() {
         this.inmbueblesOfertadas = new ArrayList<>();
     }
-    
-    
+
     public double promedioDePrecio() {
         double promedio;
 //        System.out.println(precioTotalDeTodosInmuebles()+"    "+ inmbueblesOfertadas.size()  );
-        promedio = precioTotalDeTodosInmuebles()/inmbueblesOfertadas.size();
+        promedio = precioTotalDeTodosInmuebles() / inmbueblesOfertadas.size();
         return promedio;
     }
 
-    public ArrayList<Inmueble> propiedadesMasEconomicas() {
-        // Método a resolver...
-        return null;
+    public ArrayList<Inmueble> cantidadDePropiedadesSegunTipo(TipoDeInmueble tipodeinmueble) {
+        ArrayList<Inmueble> listaPorTipoDePropiedad = new ArrayList<>();
+        for (Inmueble x : inmbueblesOfertadas) {
+            if (x.getTipoInmueble().equals(tipodeinmueble)) {
+                listaPorTipoDePropiedad.add(x);
+            }
+        }
+        return listaPorTipoDePropiedad;
+
     }
 
-    public ArrayList<Inmueble> cantidadDePropiedadesSegunTipo(TipoDeInmueble tipodeinmuebles1) {
-        // Método a resolver...
-        return null;
-    }
-    
-    public boolean cargarInmueble (Inmueble i){
-        boolean aux= false;
-        if( i != null){
+    public boolean cargarInmueble(Inmueble i) {
+        boolean aux = false;
+        if (i != null) {
             this.inmbueblesOfertadas.add(i);
-            aux= true;                    
+            aux = true;
         }
-        return aux;        
+        return aux;
     }
-    
-    private double precioTotalDeTodosInmuebles (){
+
+    private double precioTotalDeTodosInmuebles() {
         double total = 0.0;
         for (Inmueble in : inmbueblesOfertadas) {
             total = total + in.getPrecio();
@@ -50,11 +50,19 @@ public class Inmobiliaria {
         return total;
     }
 
+    public ArrayList<Inmueble> propiedadesMasEconomicas() {
+        ArrayList<Inmueble> listaPropiedadesEconomicas = new ArrayList<>();
+        for (Inmueble x : inmbueblesOfertadas) {
+            if (x.getPrecio() < promedioDePrecio()) {
+                listaPropiedadesEconomicas.add(x);
+            }
+        }
+        return listaPropiedadesEconomicas;
+    }
+
     @Override
     public String toString() {
         return "Inmobiliaria{" + "inmbueblesOfertadas=" + inmbueblesOfertadas + '}';
     }
-    
-    
 
 }

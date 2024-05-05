@@ -23,12 +23,13 @@ public class Inmueble {
         return precio;
     }
 
-    
+    public TipoDeInmueble getTipoInmueble() {
+        return tipoInmueble;
+    }
+
     @Override
     public String toString() {
         return "Inmueble{" + "domicilio=" + domicilio + ", precio=" + precio + ", tipoInmueble=" + tipoInmueble + ", barrioInmueble=" + barrioInmueble + '}';
     }
-    
-    
 
 }
