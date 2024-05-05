@@ -12,4 +12,23 @@ public class Inmueble {
     private TipoDeInmueble tipoInmueble;
     private Barrio barrioInmueble;
 
+    public Inmueble(String domicilio, double precio, TipoDeInmueble tipoInmueble, Barrio barrioInmueble) {
+        this.domicilio = domicilio;
+        this.precio = precio;
+        this.tipoInmueble = tipoInmueble;
+        this.barrioInmueble = barrioInmueble;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    
+    @Override
+    public String toString() {
+        return "Inmueble{" + "domicilio=" + domicilio + ", precio=" + precio + ", tipoInmueble=" + tipoInmueble + ", barrioInmueble=" + barrioInmueble + '}';
+    }
+    
+    
+
 }

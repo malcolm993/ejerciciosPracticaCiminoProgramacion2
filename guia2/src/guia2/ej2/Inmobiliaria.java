@@ -11,9 +11,16 @@ public class Inmobiliaria {
 
     private ArrayList<Inmueble> inmbueblesOfertadas;
 
+    public Inmobiliaria() {
+        this.inmbueblesOfertadas = new ArrayList<>();
+    }
+    
+    
     public double promedioDePrecio() {
-        // Método a resolver...
-        return 0;
+        double promedio;
+//        System.out.println(precioTotalDeTodosInmuebles()+"    "+ inmbueblesOfertadas.size()  );
+        promedio = precioTotalDeTodosInmuebles()/inmbueblesOfertadas.size();
+        return promedio;
     }
 
     public ArrayList<Inmueble> propiedadesMasEconomicas() {
@@ -25,5 +32,29 @@ public class Inmobiliaria {
         // Método a resolver...
         return null;
     }
+    
+    public boolean cargarInmueble (Inmueble i){
+        boolean aux= false;
+        if( i != null){
+            this.inmbueblesOfertadas.add(i);
+            aux= true;                    
+        }
+        return aux;        
+    }
+    
+    private double precioTotalDeTodosInmuebles (){
+        double total = 0.0;
+        for (Inmueble in : inmbueblesOfertadas) {
+            total = total + in.getPrecio();
+        }
+        return total;
+    }
+
+    @Override
+    public String toString() {
+        return "Inmobiliaria{" + "inmbueblesOfertadas=" + inmbueblesOfertadas + '}';
+    }
+    
+    
 
 }

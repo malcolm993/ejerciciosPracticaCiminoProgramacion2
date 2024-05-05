@@ -25,7 +25,7 @@ public class Agenda {
                 System.out.println(x.toString());
             }
         }else{
-            System.out.println("agenda vacia");}    
+            System.out.println("agenda vacia ");}    
     }
 
     public boolean agregarPersona(Persona a) {

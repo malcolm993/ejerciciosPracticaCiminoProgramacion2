@@ -8,7 +8,18 @@ package guia2.ej2;
 public class Principal {
 
     public static void main(String[] args) {
-        // Método a resolver...
+        Inmueble inm1 = new Inmueble("Nazca 10", 300000.00, TipoDeInmueble.DEPARTAMENTO, Barrio.RECOLETA);
+        Inmueble inm2 = new Inmueble("Mariano Acosta 870", 300000.00, TipoDeInmueble.CASA, Barrio.BELGRANO);
+        Inmueble inm3 = new Inmueble("Av Forest 45", 300000.00, TipoDeInmueble.PH, Barrio.BELGRANO);
+        
+        Inmobiliaria mobiliaria = new Inmobiliaria();
+        mobiliaria.cargarInmueble(inm1);
+        mobiliaria.cargarInmueble(inm2);
+        mobiliaria.cargarInmueble(inm3);
+        
+        System.out.println(mobiliaria.toString());
+        
+        System.out.println("el promedio del valor de lso inmuebles "+ mobiliaria.promedioDePrecio());
     }
 
 }
