@@ -12,20 +12,20 @@ import java.util.ArrayList;
  * @author santiago
  */
 public class Academia {
-    
-    private ArrayList<Curso> listaCursosAcademiia ;
+
+    private ArrayList<Curso> listaCursosAcademiia;
 
     public Academia() {
         this.listaCursosAcademiia = new ArrayList<>();
     }
-    
-    public boolean agregarCursoAcademia (Curso x){
+
+    public boolean agregarCursoAcademia(Curso x) {
         boolean aux = false;
-        if(x != null){
+        if (x != null) {
             listaCursosAcademiia.add(x);
             aux = true;
         }
         return aux;
     }
-    
+
 }

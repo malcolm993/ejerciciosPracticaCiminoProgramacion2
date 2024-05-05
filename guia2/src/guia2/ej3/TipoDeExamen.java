@@ -10,6 +10,5 @@ package guia2.ej3;
  */
 public enum TipoDeExamen {
     PRIMER_EXAMEN,
-    SEGUNDO_EXAMEN
-    ;
+    SEGUNDO_EXAMEN;
 }

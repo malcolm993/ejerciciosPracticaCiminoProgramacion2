@@ -9,5 +9,10 @@ package guia2.ej3;
  * @author santiago
  */
 public class Principal {
+
     
+     public static void main(String[] args) {
+     
+      Academia ac1 = new Academia();
+     }
 }

@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author santiago
  */
 public class Alumno {
-    
+
     private String nombre;
     private String dni;
     private ArrayList<Evaluacion> listaDeEvaluacionAlumno;
@@ -21,29 +21,29 @@ public class Alumno {
         this.dni = dni;
         this.listaDeEvaluacionAlumno = new ArrayList<>();
     }
-    
-    public double calcularPromedios (){
+
+    public double calcularPromedios() {
         double promedio = 0;
         for (Evaluacion e : listaDeEvaluacionAlumno) {
             promedio = promedio + e.getNotaExamen();
         }
-        
-        promedio = promedio/listaDeEvaluacionAlumno.size();
-    return promedio;
+
+        promedio = promedio / listaDeEvaluacionAlumno.size();
+        return promedio;
     }
-    public boolean agregarExamenAlumno (Evaluacion x){
+
+    public boolean agregarExamenAlumno(Evaluacion x) {
         boolean aux = false;
-        if(x != null){
+        if (x != null) {
             listaDeEvaluacionAlumno.add(x);
             aux = true;
         }
         return aux;
 
     }
-    
-    public int cantidadEvaluaciones (){
-        
-        
+
+    public int cantidadEvaluaciones() {
+
         return listaDeEvaluacionAlumno.size();
     }
 
@@ -51,6 +51,5 @@ public class Alumno {
     public String toString() {
         return "Alumno{" + "nombre=" + nombre + ", dni=" + dni + ", listaDeEvaluacionAlumno=" + listaDeEvaluacionAlumno + '}';
     }
-    
-    
+
 }

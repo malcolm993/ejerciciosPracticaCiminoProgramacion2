@@ -9,7 +9,7 @@ package guia2.ej3;
  * @author santiago
  */
 public class Evaluacion {
-    
+
     private TipoDeExamen examenTipo;
     private double notaExamen;
 
@@ -30,6 +30,5 @@ public class Evaluacion {
     public String toString() {
         return "Evaluacion{" + "examenTipo=" + examenTipo + ", notaExamen=" + notaExamen + '}';
     }
-    
-    
+
 }
