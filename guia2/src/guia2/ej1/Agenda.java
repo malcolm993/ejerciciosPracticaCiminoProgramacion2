@@ -19,9 +19,13 @@ public class Agenda {
     }
 
     public void listarAgenda() {
-        for (Persona x : agendaPersonas) {
-            System.out.println(x.toString());
-        }
+        
+        if (!agendaPersonas.isEmpty()){
+            for (Persona x : agendaPersonas) {
+                System.out.println(x.toString());
+            }
+        }else{
+            System.out.println("agenda vacia");}    
     }
 
     public boolean agregarPersona(Persona a) {
@@ -88,12 +92,18 @@ public class Agenda {
 
     public ArrayList<Persona> obtenerPorBarrio(String barrio) {
         ArrayList<Persona> auxPersonaBarrio = new ArrayList<>();
-        for (Persona p : auxPersonaBarrio) {
+        for (Persona p : agendaPersonas) {
             if (p.getBarrioPersona().equalsIgnoreCase(barrio)) {
                 auxPersonaBarrio.add(p);
             }
         }
 
         return auxPersonaBarrio;
+    }
+    
+    public void vaciar (){
+        while (!agendaPersonas.isEmpty()){
+            agendaPersonas.remove(0);
+        } 
     }
 }

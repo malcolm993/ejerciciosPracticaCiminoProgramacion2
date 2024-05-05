@@ -42,6 +42,14 @@ public class Principal {
 //        a1.removerPersona("45454545");
 //        a1.listarAgenda();
         System.out.println("dni encontrado:" + a1.buscarPorDni("45454545"));
+        
+        String barrioBuscado = "Floresta";
+        System.out.println("las personas del barrio " + barrioBuscado +" son " + a1.obtenerPorBarrio(barrioBuscado));
+        
+        a1.vaciar();
+        
+        a1.listarAgenda();
+        
 
     }
 
