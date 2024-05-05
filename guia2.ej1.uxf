@@ -1,0 +1,29 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>10</x><y>130</y><w>230</w><h>190</h></coordinates><panel_attributes>Agenda
+--
+
+--
++listarPersonas() : ArrayList&lt;Personas&gt;
++ devolverUltimo(): Persona
++ buscarPersona(String) : Persona
++agregarPersona(Persona) : boolean
++removerPersona(String): Persona
++modificarDomicilio(String , Domicilio): boolean
++obtenerPorBarrio (String) : Arraylist&lt;Persona&gt;
++ vaciar (): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>140</y><w>210</w><h>190</h></coordinates><panel_attributes>Personas
+--
+- nombre: String
+- apellido : String
+-dni : String
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>150</y><w>210</w><h>190</h></coordinates><panel_attributes>Domicilio
+--
+- barrio : String
+- calle : String
+- altura : int
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>200</y><w>130</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- dom
+</panel_attributes><additional_attributes>110;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>210</y><w>150</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+-agendaPersona</panel_attributes><additional_attributes>130;20;10;20</additional_attributes></element></diagram>
