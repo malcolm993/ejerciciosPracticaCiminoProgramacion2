@@ -33,7 +33,5 @@ public class Automovil {
     public String toString() {
         return "Automovil{" + "patente=" + patente + ", precio=" + precio + ", tipo=" + tipo + '}';
     }
-    
 
-    
 }
