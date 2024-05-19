@@ -22,8 +22,8 @@ public class Principal {
         System.out.println("el promedio del valor de lso inmuebles " + mobiliaria.promedioDePrecio());
 
         System.out.println("Propiedades economicas :  " + mobiliaria.propiedadesMasEconomicas());
-        
-        System.out.println("Propiedades segun tipo : "+ mobiliaria.cantidadDePropiedadesSegunTipo(TipoDeInmueble.DEPARTAMENTO));
+
+        System.out.println("Propiedades segun tipo : " + mobiliaria.cantidadDePropiedadesSegunTipo(TipoDeInmueble.DEPARTAMENTO));
     }
 
 }

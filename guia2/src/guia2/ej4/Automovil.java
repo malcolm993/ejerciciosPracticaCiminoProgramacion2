@@ -31,7 +31,7 @@ public class Automovil {
 
     @Override
     public String toString() {
-        return "Automovil{" + "patente=" + patente + ", precio=" + precio + ", tipo=" + tipo + '}';
+        return "\nAutomovil{" + "patente=" + patente + ", precio=" + precio + ", tipo=" + tipo + '}';
     }
 
 }

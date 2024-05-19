@@ -19,13 +19,14 @@ public class Agenda {
     }
 
     public void listarAgenda() {
-        
-        if (!agendaPersonas.isEmpty()){
+
+        if (!agendaPersonas.isEmpty()) {
             for (Persona x : agendaPersonas) {
                 System.out.println(x.toString());
             }
-        }else{
-            System.out.println("agenda vacia ");}    
+        } else {
+            System.out.println("agenda vacia ");
+        }
     }
 
     public boolean agregarPersona(Persona a) {
@@ -100,10 +101,10 @@ public class Agenda {
 
         return auxPersonaBarrio;
     }
-    
-    public void vaciar (){
-        while (!agendaPersonas.isEmpty()){
+
+    public void vaciar() {
+        while (!agendaPersonas.isEmpty()) {
             agendaPersonas.remove(0);
-        } 
+        }
     }
 }

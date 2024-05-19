@@ -23,7 +23,7 @@ public class MarcaAutomotriz {
 
     public ArrayList<Concesionaria> obtenerConcesionariaMaxVeh() {
         ArrayList<Concesionaria> listaAux = new ArrayList<>();
-        for (Concesionaria c1 : listaAux) {
+        for (Concesionaria c1 : listaConcesionarias) {
             if (c1.cantidadVehiculosConcesionaria() >= maximaCantidadVehiculos()) {
                 listaAux.add(c1);
             }
@@ -50,7 +50,7 @@ public class MarcaAutomotriz {
 
         int cont = 0;
         Automovil a1 = null;
-        while (cont <= cantidadConcesionarias() && a1 == null) {
+        while (cont < cantidadConcesionarias() && a1 == null) {
             Concesionaria auxC = listaConcesionarias.get(cont);
             a1 = auxC.borrarAutomovil(patente);
             cont++;
@@ -71,8 +71,8 @@ public class MarcaAutomotriz {
 
         return x;
     }
-    
-    public void agregarConcesionaria( Concesionaria nuevaConcesionaria){
+
+    public void agregarConcesionaria(Concesionaria nuevaConcesionaria) {
         listaConcesionarias.add(nuevaConcesionaria);
     }
 
@@ -80,7 +80,7 @@ public class MarcaAutomotriz {
         int contC = 0;
         Concesionaria auxC = null;
 
-        while (contC <= cantidadConcesionarias() && auxC == null) {
+        while (contC < cantidadConcesionarias() && auxC == null) {
             Concesionaria auxC2 = listaConcesionarias.get(contC);
             if (auxC2.getNombreConcesionaria().equalsIgnoreCase(nombreC)) {
                 auxC = auxC2;
@@ -92,7 +92,8 @@ public class MarcaAutomotriz {
 
     @Override
     public String toString() {
-        return "MarcaAutomotriz{" + "listaConcesionarias=" + listaConcesionarias + '}';
+        return "\nMarcaAutomotriz{"
+                + "listaConcesionarias=" + listaConcesionarias + '}';
     }
 
 }

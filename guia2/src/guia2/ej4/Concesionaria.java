@@ -16,7 +16,6 @@ public class Concesionaria {
         this.nombreConcesionaria = nombreConcesionaria;
         listaAutmoviles = new ArrayList<>();
     }
-    
 
     public ArrayList<Automovil> mostrarVehiculos(TipoDeAutomovil tipodeautomovil1) {
         ArrayList<Automovil> listaAux = new ArrayList<>();
@@ -47,12 +46,19 @@ public class Concesionaria {
 
     public Automovil buscarPorPatente(String patente) {
         Automovil a = null;
-        for (Automovil x : listaAutmoviles) {
-            if (x.getPatente().equalsIgnoreCase(patente)) {
-                a = x;
-
+        int cont = 0;
+        while (cont < cantidadVehiculosConcesionaria() && a == null) {
+            Automovil aAux = listaAutmoviles.get(cont);
+            if (aAux.getPatente().equalsIgnoreCase(patente)) {
+                a = aAux;
             }
+            cont++;
         }
+//        for (Automovil x : listaAutmoviles) {
+//            if (x.getPatente().equalsIgnoreCase(patente)) {
+//                a = x;
+//            }
+//        }
         return a;
     }
 
@@ -71,7 +77,8 @@ public class Concesionaria {
 
     @Override
     public String toString() {
-        return "Concesionaria{" + "nombreConcesionaria=" + nombreConcesionaria + ", listaAutmoviles=" + listaAutmoviles + '}';
+        return "\n Concesionaria{" + "nombreConcesionaria=" + nombreConcesionaria
+                + ", listaAutmoviles=" + listaAutmoviles + '}';
     }
 
 }

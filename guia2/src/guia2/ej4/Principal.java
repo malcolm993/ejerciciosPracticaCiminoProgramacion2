@@ -22,14 +22,12 @@ public class Principal {
         Concesionaria c2 = new Concesionaria("TODO VEHICULO");
 
         MarcaAutomotriz m1 = new MarcaAutomotriz();
-        
-        
 
         System.out.println(m1.toString());
-        
+
         m1.agregarConcesionaria(c2);
         m1.agregarConcesionaria(c1);
-        
+
         c1.agregarAutomovilLista(a9);
         c1.agregarAutomovilLista(a8);
         c1.agregarAutomovilLista(a7);
@@ -37,12 +35,21 @@ public class Principal {
         c2.agregarAutomovilLista(a5);
         c2.agregarAutomovilLista(a4);
         c2.agregarAutomovilLista(a3);
-        
-        //System.out.println(m1.toString());
-        
-        System.out.println(c2.mostrarVehiculos(TipoDeAutomovil.AUTO)); 
-        
 
+        //System.out.println(m1.toString());
+        System.out.println(" cantidad de Autos en concesionaria TODO VEHICULO " + c2.mostrarVehiculos(TipoDeAutomovil.AUTO));
+
+        System.out.println(m1.toString());
+
+        System.out.println("Concesionaria/s con maxima cantidad de vehiculos" + m1.obtenerConcesionariaMaxVeh());
+
+        System.out.println( "SE ELIMINO EL SIGUIENTE VEHICULO " + m1.borrarVehiculoConcesionaria("GHI789"));
+
+        System.out.println(m1.toString());
+
+        System.out.println(m1.cambiarVehiculoConcesionaria("CONCESIONARIA BUENOS AIRES", "JKL123"));
+
+        System.out.println(m1.toString());
     }
 
 }
