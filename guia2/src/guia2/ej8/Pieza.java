@@ -12,8 +12,6 @@ public class Pieza {
     public Pieza(String nombre) {
         this.nombre = nombre;
     }
-    
-    
 
     public String getNombre() {
         return nombre;

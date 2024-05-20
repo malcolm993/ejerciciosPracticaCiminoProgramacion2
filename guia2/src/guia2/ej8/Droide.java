@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 public class Droide {
 
-    ArrayList<Pieza> listaPiezaNoOperativos;
+    private ArrayList<Pieza> listaPiezaNoOperativos;
     private ArrayList<Pieza> listaPiezasOperativos;
     private ArrayList<Droide> droidesRotos;
 
@@ -18,73 +18,100 @@ public class Droide {
         listaPiezasOperativos = new ArrayList<>();
         droidesRotos = new ArrayList<>();
     }
-    
+
     public ResultadoReparacion autoRepararse() {
         ResultadoReparacion res = ResultadoReparacion.COMPLETAMENTE_OPERATIVO;
-        
-        if (!this.listaPiezaNoOperativos.isEmpty()){
+
+        if (!this.listaPiezaNoOperativos.isEmpty()) {
+            System.out.println("hasta aca bien 1");
             res = repararme();
         }
         return res;
     }
 
     private ResultadoReparacion repararme() {
+        System.out.println("hasta aca bien 2");
         ResultadoReparacion res = ResultadoReparacion.REPARACION_IMPOSIBLE;
-        if (efectuarReparacion()> 0){
-            res= ResultadoReparacion.REPARACION_PARCIAL;
+        if (efectuarReparacion() > 0) {
+            res = ResultadoReparacion.REPARACION_PARCIAL;
+
         }
-        return res ;
+        return res;
     }
 
     private int efectuarReparacion() {
-        int cantP=0;
-        for ( Pieza p : this.listaPiezaNoOperativos){
-            boolean sePudoRep = reparar (p);
-            if (sePudoRep){
+        int cantP = 0;
+        //modificar for each por while
+        
+        System.out.println("hasta aca bien 3");
+        for (Pieza p : this.listaPiezaNoOperativos) {
+            boolean sePudoRep = reparar(p);
+            if (sePudoRep) {
                 cantP++;
             }
         }
         return cantP;
     }
-    
-    private boolean reparar(Pieza rota){
+
+    private boolean reparar(Pieza rota) {
         boolean reparada = false;
         int i = 0;
-        
-        while ( i < droidesRotos.size() && ! reparada ){
+        System.out.println("hasta aca bien 4");
+        while (i < droidesRotos.size() && !reparada) {
             Droide d = droidesRotos.get(i);
-            Pieza  x = d.sacarPiezaOp(rota.getNombre()); 
-            if (x != null){
+            Pieza x = d.sacarPiezaOp(rota.getNombre());
+            if (x != null) {
                 reparada = true;
                 listaPiezaNoOperativos.remove(rota);
                 listaPiezasOperativos.add(rota);
             }
+            i++;
         }
-        
+
         return reparada;
     }
-    
-    private Pieza sacarPiezaOp( String nom){
+
+    public ArrayList<Pieza> getListaPiezaNoOperativos() {
+        return listaPiezaNoOperativos;
+    }
+
+    public ArrayList<Pieza> getListaPiezasOperativos() {
+        return listaPiezasOperativos;
+    }
+
+    private Pieza sacarPiezaOp(String nom) {
         Pieza p = null;
-        int c =0;
-        
-        while ( c < listaPiezasOperativos.size() && p != null ){
+        int c = 0;
+        System.out.println("longitud de las piezas Op :" + listaPiezasOperativos.size());
+        while (c < listaPiezasOperativos.size() && p == null) {
+            System.out.println("hasta aca bien 5");
             Pieza aux = listaPiezasOperativos.get(c);
-            if (aux.getNombre().equalsIgnoreCase(nom)){
+            if (aux.getNombre().equalsIgnoreCase(nom)) {
                 p = aux;
                 listaPiezasOperativos.remove(p);
-                
+
             }
             c++;
-            
+
         }
-        return p; 
+        return p;
     }
-    
-    
-    private void agregarListaDroidesRotos( Droide x){
-        if ( x != null){
+
+    public void agregarListaDroidesRotos(Droide x) {
+        if (x != null) {
             droidesRotos.add(x);
+        }
+    }
+
+    public void agregarListaPiezasNoOp(Pieza x) {
+        if (x != null) {
+            listaPiezaNoOperativos.add(x);
+        }
+    }
+
+    public void agregarListaPiezasOp(Pieza x) {
+        if (x != null) {
+            listaPiezasOperativos.add(x);
         }
     }
 
