@@ -9,6 +9,16 @@ public class Pieza {
 
     private String nombre;
 
+    public Pieza(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    
+
+    public String getNombre() {
+        return nombre;
+    }
+
     public void Habitacion(int num, double precio) {
         // Método a resolver...
     }

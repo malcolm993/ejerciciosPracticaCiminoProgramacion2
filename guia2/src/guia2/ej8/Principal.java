@@ -8,7 +8,14 @@ package guia2.ej8;
 public class Principal {
 
     public static void main(String[] args) {
-        // Método a resolver...
+        
+        
+        Pieza p1 = new Pieza("Batería de litio");
+        Pieza p2 = new Pieza("Batería de litio");
+        Pieza p3 = new Pieza("Batería de litio");
+        Pieza p4 = new Pieza("Batería de litio");
+        Pieza p5 = new Pieza("Batería de litio");
+        Pieza p6 = new Pieza("Batería de litio");
     }
 
 }
