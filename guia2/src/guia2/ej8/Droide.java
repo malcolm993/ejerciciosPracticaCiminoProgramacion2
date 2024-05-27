@@ -42,14 +42,22 @@ public class Droide {
     private int efectuarReparacion() {
         int cantP = 0;
         //modificar for each por while
-        
+
         System.out.println("hasta aca bien 3");
-        for (Pieza p : this.listaPiezaNoOperativos) {
-            boolean sePudoRep = reparar(p);
-            if (sePudoRep) {
+        
+        while( cantP < this.listaPiezaNoOperativos.size() ){
+            Pieza auxPieza = this.listaPiezasOperativos.get(cantP);
+            boolean sePudoRep = reparar(auxPieza);
+            if (sePudoRep){
                 cantP++;
             }
         }
+//        for (Pieza p : this.listaPiezaNoOperativos) {
+//            boolean sePudoRep = reparar(p);
+//            if (sePudoRep) {
+//                cantP++;
+//            }
+//        }
         return cantP;
     }
 
@@ -88,7 +96,7 @@ public class Droide {
             Pieza aux = listaPiezasOperativos.get(c);
             if (aux.getNombre().equalsIgnoreCase(nom)) {
                 p = aux;
-                listaPiezasOperativos.remove(p);
+                listaPiezasOperativos.remove(aux);
 
             }
             c++;
