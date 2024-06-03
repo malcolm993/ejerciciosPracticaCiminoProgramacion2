@@ -1,11 +1,12 @@
 package guia3ej7;
 
 /**
-* Código generado por la app UXFtoJava by Charly Cimino
-* @see https://github.com/CharlyCimino/uxf-to-java
-*/
+ * Código generado por la app UXFtoJava by Charly Cimino
+ *
+ * @see https://github.com/CharlyCimino/uxf-to-java
+ */
 public class Rectangulo extends Figura {
-    
+
     private double altura;
     private double base;
 
@@ -17,15 +18,12 @@ public class Rectangulo extends Figura {
 
     @Override
     public double calcularPerimetro() {
-        return (base *2)+ (altura *2);
+        return (base * 2) + (altura * 2);
     }
 
     @Override
     public double calcularArea() {
-        return base * altura ; 
+        return base * altura;
     }
-    
-    
-    
 
 }

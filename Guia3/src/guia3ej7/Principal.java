@@ -1,13 +1,25 @@
 package guia3ej7;
 
 /**
-* Código generado por la app UXFtoJava by Charly Cimino
-* @see https://github.com/CharlyCimino/uxf-to-java
-*/
+ * Código generado por la app UXFtoJava by Charly Cimino
+ *
+ * @see https://github.com/CharlyCimino/uxf-to-java
+ */
 public class Principal {
 
     public static void main(String[] args) {
-        // Método a resolver...
+        Circunferencia f1 = new Circunferencia(25, "Rojo");
+        Rectangulo f2 = new Rectangulo(3, 2, "blanco");
+        TrianguloEquilatero f3 = new TrianguloEquilatero(3, 4, "amarillo");
+
+        GrupoDeFiguras g = new GrupoDeFiguras();
+
+        g.agregarFigura(f1);
+        g.agregarFigura(f2);
+        g.agregarFigura(f3);
+        
+        System.out.println(f1.toString());
+       
     }
 
 }

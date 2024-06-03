@@ -1,21 +1,19 @@
 package guia3ej7;
 
 /**
-* Código generado por la app UXFtoJava by Charly Cimino
-* @see https://github.com/CharlyCimino/uxf-to-java
-*/
+ * Código generado por la app UXFtoJava by Charly Cimino
+ *
+ * @see https://github.com/CharlyCimino/uxf-to-java
+ */
 public abstract class Figura {
 
-    
     private String color;
     private double area;
     private double perimetro;
 
-    public Figura (String color) {   
+    public Figura(String color) {
         this.color = color;
     }
-    
-    
 
     public abstract double calcularPerimetro();
 
@@ -25,7 +23,5 @@ public abstract class Figura {
     public String toString() {
         return "Figura{" + "color=" + color + ", area=" + area + ", perimetro=" + perimetro + '}';
     }
-    
-    
 
 }
