@@ -22,4 +22,11 @@ public abstract class Carta {
         this.tapada= false;
     }
 
+    @Override
+    public String toString() {
+        return "Carta{" + "tapada=" + tapada + '}';
+    }
+    
+    
+
 }

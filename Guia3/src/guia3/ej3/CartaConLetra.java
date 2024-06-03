@@ -14,6 +14,11 @@ public class CartaConLetra extends CartaConPalo {
         this.letra = letra;
     }
 
+    @Override
+    public String toString() {
+        return "CartaConLetra{" + "letra=" + letra + '}';
+    }
+
     
 
    

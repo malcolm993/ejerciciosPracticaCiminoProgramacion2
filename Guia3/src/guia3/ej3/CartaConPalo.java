@@ -18,8 +18,13 @@ public abstract class CartaConPalo extends Carta {
     
 
     public int getValor() {
-        // Método a resolver...
+        
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "CartaConPalo{" + "palo=" + palo + '}';
     }
 
 }

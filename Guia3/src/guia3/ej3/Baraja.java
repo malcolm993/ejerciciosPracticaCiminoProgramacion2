@@ -19,6 +19,7 @@ public class Baraja {
     private void generarCartas() {
         generarJokers();
         generarCartasRestantes();
+        System.out.println("cantidad de cartas: " + this.listaCartas.size());
     }
     
     private void generarJokers(){
@@ -48,4 +49,10 @@ public class Baraja {
             this.listaCartas.add(new CartaNumerica(i, p));
         }
     }
+    
+    public void mostrarTodasLasCartas(){
+        
+    }
+    
+    
 }
