@@ -1,13 +1,15 @@
 package guia3.ej3;
 
 /**
-* Código generado por la app UXFtoJava by Charly Cimino
-* @see https://github.com/CharlyCimino/uxf-to-java
-*/
+ * Código generado por la app UXFtoJava by Charly Cimino
+ *
+ * @see https://github.com/CharlyCimino/uxf-to-java
+ */
 public class Principal {
 
     public static void main(String[] args) {
-        // Método a resolver...
+        Baraja b = new Baraja();
+        
     }
 
 }
