@@ -7,24 +7,30 @@ package guia3ej7;
  */
 public class TrianguloEquilatero extends Figura {
 
-    private double altura;
-    private double base;
+    private double lado;
 
-    public TrianguloEquilatero(double altura, double base, String color) {
+    public TrianguloEquilatero(double lado, String color) {
         super(color);
-        this.altura = altura;
-        this.base = base;
+        this.lado = lado;
+
     }
 
     @Override
     public double calcularPerimetro() {
 
-        return (base * 3);
+        return (lado * 3);
     }
 
     @Override
     public double calcularArea() {
-        return (base * altura) / 2;
+        return (Math.sqrt(3) * lado) / 2;
     }
+
+    @Override
+    public void mostrarFigura() {
+        System.out.println("Triangulo : "+ "lado: " + lado + "perimetro : "+ calcularPerimetro()+ "área: "+ calcularArea()+ "color : " + getColor());
+    }
+
+    
 
 }

@@ -24,4 +24,10 @@ public class Circunferencia extends Figura {
         return Math.PI * (Math.pow(radio, 2.0));
     }
 
+    @Override
+    public void mostrarFigura() {
+        System.out.println("Circunferencia : "+ "radio: " + radio + "perimetro : "+ calcularPerimetro()+ "área: "+ calcularArea()+ "color : " + getColor());
+    }
+
+    
 }

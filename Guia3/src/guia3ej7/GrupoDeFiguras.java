@@ -22,7 +22,8 @@ public class GrupoDeFiguras {
 
     public void mostrarInfoFiguras() {
         for (Figura f : listaFiguras) {
-            f.toString();
+            
+            f.mostrarFigura();
         }
     }
 

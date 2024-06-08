@@ -10,16 +10,16 @@ public class Principal {
     public static void main(String[] args) {
         Circunferencia f1 = new Circunferencia(25, "Rojo");
         Rectangulo f2 = new Rectangulo(3, 2, "blanco");
-        TrianguloEquilatero f3 = new TrianguloEquilatero(3, 4, "amarillo");
+        TrianguloEquilatero f3 = new TrianguloEquilatero(5, "verde");
 
         GrupoDeFiguras g = new GrupoDeFiguras();
 
         g.agregarFigura(f1);
         g.agregarFigura(f2);
         g.agregarFigura(f3);
-        
-        System.out.println(f1.toString());
-       
+
+        g.mostrarInfoFiguras();
+
     }
 
 }

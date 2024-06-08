@@ -8,8 +8,6 @@ package guia3ej7;
 public abstract class Figura {
 
     private String color;
-    private double area;
-    private double perimetro;
 
     public Figura(String color) {
         this.color = color;
@@ -19,9 +17,11 @@ public abstract class Figura {
 
     public abstract double calcularArea();
 
-    @Override
-    public String toString() {
-        return "Figura{" + "color=" + color + ", area=" + area + ", perimetro=" + perimetro + '}';
+    public String getColor() {
+        return color;
     }
+    
+    
 
+    public abstract void mostrarFigura();
 }
