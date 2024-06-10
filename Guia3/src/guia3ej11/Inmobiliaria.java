@@ -14,9 +14,22 @@ public class Inmobiliaria implements Interesado {
     private double porcentajeComision;
     private ArrayList<Inmueble> listaInmuebles;
 
+    public Inmobiliaria(String nombre, String email, double porcentajeComision) {
+        this.nombre = nombre;
+        this.email = email;
+        this.porcentajeComision = porcentajeComision;
+        listaInmuebles = new ArrayList<>();
+    }
+    
+    
+
     @Override
-    public void informarCambioDePrecio() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void informarCambioDePrecio(double precioviejo) {
+        System.out.println("He recibido un mail a nuestra casilla "+ this.email + "con el mensaje");
+    }
+
+    public String getEmail() {
+        return email;
     }
 
 }

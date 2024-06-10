@@ -12,6 +12,13 @@ public class Uprop {
     private ArrayList<Inmueble> listaDeInmueblesUprop;
     private ArrayList<Inmobiliaria> listaDeInmobiliariasUprop;
 
+    public Uprop() {
+        
+        listaDeInmobiliariasUprop = new ArrayList<>();
+        listaDeInmueblesUprop = new ArrayList<>();
+    }
+
+    
     public void cambioDePrecio(Inmueble inmueble1) {
         // Método a resolver...
     }

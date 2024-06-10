@@ -12,9 +12,21 @@ public class Cliente implements Interesado {
     private String telefono;
     private String email;
 
+    public Cliente(String apellido, String nombre, String telefono, String email) {
+        this.apellido = apellido;
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.email = email;
+    }
+    
     @Override
-    public void informarCambioDePrecio() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void informarCambioDePrecio(double precioviejo) {
+        System.out.println("He recibido un SMS en mi teléfono " + this.telefono + "con el mensaje:");
+        
+    }
+
+    public String getTelefono() {
+        return telefono;
     }
 
 }
