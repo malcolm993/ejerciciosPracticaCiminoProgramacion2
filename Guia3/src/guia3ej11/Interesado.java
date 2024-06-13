@@ -7,7 +7,6 @@ package guia3ej11;
  */
 public interface Interesado {
 
-    public abstract void informarCambioDePrecio(double x)
-    ;
-    
+    public abstract void informarCambioDePrecio(String mensajegenerado);
+
 }

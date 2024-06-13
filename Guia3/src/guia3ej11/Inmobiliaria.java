@@ -20,12 +20,11 @@ public class Inmobiliaria implements Interesado {
         this.porcentajeComision = porcentajeComision;
         listaInmuebles = new ArrayList<>();
     }
-    
-    
 
     @Override
-    public void informarCambioDePrecio(double precioviejo) {
-        System.out.println("He recibido un mail a nuestra casilla "+ this.email + "con el mensaje");
+    public void informarCambioDePrecio(String mensaje) {
+        System.out.println("He recibido un mail a nuestra casilla " + this.email + "con el mensaje");
+        System.out.println(mensaje);
     }
 
     public String getEmail() {

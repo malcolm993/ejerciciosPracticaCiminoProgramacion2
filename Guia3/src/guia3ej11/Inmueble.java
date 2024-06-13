@@ -22,11 +22,11 @@ public class Inmueble {
         this.precioDolares = precioDolares;
         listaDeInteresados = new ArrayList<>();
     }
-    
-    private boolean validacionPrecio(double x){
+
+    private boolean validacionPrecio(double x) {
         boolean aux = false;
-        if(x > 0){
-            aux= true;
+        if (x > 0) {
+            aux = true;
         }
         return aux;
     }
@@ -34,35 +34,41 @@ public class Inmueble {
     private void setPrecioDolares(double precioDolares) {
         this.precioDolares = precioDolares;
     }
-    
-    
-    
-    public void cambioDePrecio(double a){
+
+    public void cambioDePrecio(double a) {
         double aux = 0.0;
-        if(validacionPrecio(a)){
+        if (validacionPrecio(a)) {
             aux = getPrecioDolares();
             setPrecioDolares(a);
             informarAInteresados(aux);
-            
+
         }
     }
 
     public double getPrecioDolares() {
         return precioDolares;
-        
-        
+
     }
-    
-    private String crearMensaje(){
-        String aux= "El inmueble
-        return
+
+    public void agregarInteresadoLista(Interesado x) {
+        this.listaDeInteresados.add(x);
     }
-    
-    private void informarAInteresados(double precioviejo){
+
+    private String crearMensaje(double precioviejo) {
+        String aux = "El inmueble " + this.toString() + " por el que se a demostrado interes cambio su precio de " + precioviejo + " a " + this.getPrecioDolares();
+        return aux;
+    }
+
+    private void informarAInteresados(double precioviejo) {
+
         for (Interesado x : listaDeInteresados) {
-            x.informarCambioDePrecio(precioviejo);
+            x.informarCambioDePrecio(crearMensaje(precioviejo));
         }
     }
-    
+
+    @Override
+    public String toString() {
+        return "Inmueble{" + "domicilio=" + domicilio + ", superficieM2=" + superficieM2 + ", cantAmbientes=" + cantAmbientes + '}';
+    }
 
 }

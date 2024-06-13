@@ -18,11 +18,12 @@ public class Cliente implements Interesado {
         this.telefono = telefono;
         this.email = email;
     }
-    
+
     @Override
-    public void informarCambioDePrecio(double precioviejo) {
-        System.out.println("He recibido un SMS en mi teléfono " + this.telefono + "con el mensaje:");
-        
+    public void informarCambioDePrecio(String mensaje) {
+        System.out.println("He recibido un SMS en mi teléfono " + this.telefono + " con el mensaje:");
+        System.out.println(mensaje);
+
     }
 
     public String getTelefono() {
