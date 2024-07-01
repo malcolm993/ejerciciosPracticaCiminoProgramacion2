@@ -27,7 +27,7 @@ public class Sistema {
     private int cantidadReclamosInfraccionCaducada() {
         int cont = 0;
         for (Reclamo r : listaReclamos) {
-            if (r.getInfraccionReclamada().isCaducada()) {
+            if (r.getInfraccionReclamada().isCaducado()) {
                 cont++;
             }
         }
