@@ -10,31 +10,44 @@ import java.time.Period;
  */
 public class InfraccionMalEstacionamiento extends Infraccion {
 
-    private final double montoFijo = 300;
-    private final int cantidadUF = 20;
+    private static final double montoFijo = 300;
+    private static final int cantidadUF = 20;
 
     public InfraccionMalEstacionamiento(String fecha) {
         super(fecha);
-        setImporte(calcularImporte());
-        verificarCaducada();
+
+    }
+
+
+//    private void verificarCaducada() {
+//        if (condicionCaducada()) {
+//            cambioIsCaducada();
+//        }
+//    }
+//    private boolean condicionCaducada() {
+//        Period p = Period.between(getFecha(), LocalDate.now());
+//        int anios = p.getYears();
+////        System.out.println("cantidad de anios " + anios);
+//        return anios >= 1;
+//    }
+    @Override
+    public boolean isCaducado() {
+        Period p = Period.between(getFecha(), LocalDate.now());
+        int anios = p.getYears();
+        return anios >= 1;
+
+    }
+
+    @Override
+    public int getCantUFs() {
+        return cantidadUF;
     }
 
     @Override
     public double calcularImporte() {
-        return (getUnidadFija() * cantidadUF) + montoFijo;
+        return super.calcularImporte() + montoFijo;
     }
 
-    private void verificarCaducada() {
-        if (condicionCaducada()) {
-            cambioIsCaducada();
-        }
-    }
-
-    private boolean condicionCaducada() {
-        Period p = Period.between(getFecha(), LocalDate.now());
-        int anios = p.getYears();
-//        System.out.println("cantidad de anios " + anios);
-        return anios >= 1;
-    }
-
+    
+    
 }

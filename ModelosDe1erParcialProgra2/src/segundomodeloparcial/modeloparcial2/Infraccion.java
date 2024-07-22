@@ -7,12 +7,10 @@ import java.time.LocalDate;
  *
  * @see https://github.com/CharlyCimino/uxf-to-java
  */
-public abstract class Infraccion {
+public abstract class Infraccion implements Caducidad {
 
     private LocalDate fecha;
-    private boolean caducada = false;
-    private double importe;
-    private double unidadFija = 60.5;
+    private static double unidadFija = 60.5;
 
     public Infraccion(String fecha) {
         this.fecha = LocalDate.parse(fecha);
@@ -23,26 +21,13 @@ public abstract class Infraccion {
         return fecha;
     }
 
-    public double getUnidadFija() {
-        return unidadFija;
+
+    public abstract int getCantUFs();
+    
+    public double calcularImporte() {
+        return Infraccion.unidadFija * getCantUFs();
     }
 
-    public double getImporte() {
-        return importe;
-    }
-
-    public void setImporte(double importe) {
-        this.importe = importe;
-    }
-
-    public abstract double calcularImporte();
-
-    public void cambioIsCaducada() {
-        caducada = !caducada;
-    }
-
-    public boolean isCaducada() {
-        return caducada;
-    }
+ 
 
 }

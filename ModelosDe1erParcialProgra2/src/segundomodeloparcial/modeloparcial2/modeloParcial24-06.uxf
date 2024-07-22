@@ -1,0 +1,29 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>30</x><y>90</y><w>270</w><h>100</h></coordinates><panel_attributes>Sistema
+--
+--
++ mostrarImposteTotalReclamos()
++agregarReclamoALIsta(Reclamo)
++cantidadReclamosInfraccionCaducada():int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>90</y><w>190</w><h>120</h></coordinates><panel_attributes>Reclamo
+--
+-dni : String
+-numeroDeReclamo: int
+_+ CONTADOR: int = 0_
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>130</y><w>150</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>130;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>740</x><y>110</y><w>190</w><h>120</h></coordinates><panel_attributes>/Infraccion/
+--
+-fecha: LocalDate
+-caducada: boolean
+-double: importe 
+-double: unidadFija
+--
+/+calcularImporte(): double/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>370</y><w>190</w><h>120</h></coordinates><panel_attributes>InfraccionExcesoVelocidad
+--
+_-cantidadUF = 20_
+_-montoFijo: int = 300_
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>150</y><w>160</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>140;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>370</y><w>190</w><h>120</h></coordinates><panel_attributes>InfraccionMalEstacionamiento
+--
+_-montoFijo: double_
+--
+-verificarCaducada()
+-condicionCaducada():boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>220</y><w>290</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>270;10;10;150</additional_attributes></element><element><id>Relation</id><coordinates><x>790</x><y>220</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element></diagram>

@@ -9,17 +9,21 @@ import java.time.LocalDate;
  */
 public class InfraccionExcesoVelocidad extends Infraccion {
 
-    private final int cantidadUF = 100;
+    private static final int CANTIDADUF = 100;
 
     public InfraccionExcesoVelocidad(String fecha) {
         super(fecha);
-        setImporte(calcularImporte());
 
     }
 
     @Override
-    public double calcularImporte() {
-        return getUnidadFija() * cantidadUF;
+    public int getCantUFs() {
+        return CANTIDADUF;
+    }
+
+    @Override
+    public boolean isCaducado() {
+        return false;
     }
 
 }
