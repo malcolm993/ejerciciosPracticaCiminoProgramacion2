@@ -17,7 +17,7 @@ public class Shopie {
         listaInformesDePrograma = new ArrayList<>();
     }
     
-    private void generarInformesDeCalidad (){
+    public void generarInformesDeCalidad (){
         for (Programa p : listaDeProgramas) {
             if(!siSeGeneroInforme(p)){
                 Informe nuevo = new Informe(p);
@@ -31,13 +31,13 @@ public class Shopie {
     private boolean siSeGeneroInforme( Programa buscado){
         int cont = 0;
         boolean flag = false;
-        while(flag == false & cont < listaDeProgramas.size() ){
-            Programa aux = listaDeProgramas.get(cont);
+        while(flag == false & cont < listaInformesDePrograma.size() & listaInformesDePrograma.size()>0 ){
+            Programa aux = listaInformesDePrograma.get(cont).getProgramaInformado();
             if(aux == buscado){
                 flag = true;
             }
+            cont++;
         }
-        
         return flag;
             
     }
@@ -54,14 +54,11 @@ public class Shopie {
 
     public ArrayList<Programa> programasPorDebajoDe(int numeroFiltro ) {
         ArrayList<Programa> lista = new ArrayList<>();
-        for (Programa p : lista) {
-            if (p.indiceDeCalidad()< numeroFiltro ){
-                
+        for (Programa p : listaDeProgramas) {
+            if (p.indiceDeCalidad()< numeroFiltro ){   
                 lista.add(p);
-            }
-                
-        }
-        
+            }        
+        }   
         return lista;
     }
     

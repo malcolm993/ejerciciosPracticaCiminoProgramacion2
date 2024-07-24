@@ -81,6 +81,11 @@ public class Programa implements Calificables{
         return encontrado;    
     }
 
+    @Override
+    public String toString() {
+        return "\n\nPrograma{" + "id=" + id + ", nombrePrograma=" + nombrePrograma + ", nombreResponsable=" + nombreResponsable + ", siPasoPruebas=" + siPasoPruebas + ", indice de valor: "+ indiceDeCalidad()+'}';
+    }
+
     public ArrayList<Fuente> listadoFuentesMayoresAlPromedio( double promedioFiltro) {
         ArrayList<Fuente> lista1 = new ArrayList<>();
         for (Fuente j : listaDeFuentesDePrograma) {

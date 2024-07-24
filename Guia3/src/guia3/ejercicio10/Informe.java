@@ -18,6 +18,16 @@ public class Informe {
         this.programaInformado = programaInformado;
         this.indiceCalidadPrograma = programaInformado.indiceDeCalidad();
     }
+
+    public double getIndiceCalidadPrograma() {
+        return indiceCalidadPrograma;
+    }
+
+    public Programa getProgramaInformado() {
+        return programaInformado;
+    }
+    
+    
     
     public void mostrarInformePrograma(){
     

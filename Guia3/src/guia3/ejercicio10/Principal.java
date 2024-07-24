@@ -50,12 +50,31 @@ public class Principal {
         p2.agregarFuente(fp3);
         p2.agregarFuente(fm2);
         
+        p3.agregarFuente(fp2);
+        
         //pruebas de programa 
         ///listado de fuentes mayores al promedio
         System.out.println( p2.listadoFuentesMayoresAlPromedio(1.0));
         ///mostrar detalle del metodo dentro de una fuente de uno de lo sprogrmas
         p1.mostrarDetelleDeMetodo("AAA");
         
+        
+        //pruebas Shopie
+        // programa por debajo de un promedio
+        s.agregarProgramaAShopie(p1);
+        s.agregarProgramaAShopie(p2);
+        s.agregarProgramaAShopie(p3);
+        
+        System.out.println(p3);
+        
+        int valor=10;
+        System.out.println("Programas con promedio debajo : " + valor);
+        System.out.println(s.programasPorDebajoDe(10));
+        
+        //mostrar informes
+        System.out.println("INFORMES");
+        s.generarInformesDeCalidad();
+        s.informeIndiceCalidadProgramas();
     }
 
 }
