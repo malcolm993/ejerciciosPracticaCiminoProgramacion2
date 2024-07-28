@@ -4,7 +4,7 @@ package guia3.ejercicio10;
 * Código generado por la app UXFtoJava by Charly Cimino
 * @see https://github.com/CharlyCimino/uxf-to-java
 */
-public class Metodo implements Calificables {
+public class Metodo implements Calificable {
 
     private int cantidadParametros;
     private int cantidadRamificacinesFlujo;

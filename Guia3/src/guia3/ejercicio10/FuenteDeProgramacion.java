@@ -6,12 +6,12 @@ import java.util.ArrayList;
 * Código generado por la app UXFtoJava by Charly Cimino
 * @see https://github.com/CharlyCimino/uxf-to-java
 */
-public class FuentesDeProgramacion extends Fuente {
+public class FuenteDeProgramacion extends Fuente {
 
-    private LenguageProgra tipoDeLenguage;
+    private LenguajeProgra tipoDeLenguage;
     private ArrayList<Metodo> listaMetodosProgra;
 
-    public FuentesDeProgramacion(String nombre, String ubicacion ,LenguageProgra tipoDeLenguage) {
+    public FuenteDeProgramacion(String nombre, String ubicacion ,LenguajeProgra tipoDeLenguage) {
         super(nombre, ubicacion);
         this.tipoDeLenguage = tipoDeLenguage;
         listaMetodosProgra = new ArrayList<>();

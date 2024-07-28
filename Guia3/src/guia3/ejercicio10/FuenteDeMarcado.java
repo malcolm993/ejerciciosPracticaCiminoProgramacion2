@@ -4,12 +4,12 @@ package guia3.ejercicio10;
 * Código generado por la app UXFtoJava by Charly Cimino
 * @see https://github.com/CharlyCimino/uxf-to-java
 */
-public class FuentesDeMarcado extends Fuente  {
+public class FuenteDeMarcado extends Fuente  {
 
     private int pesoArchivoKB;
-    private LenguageMarcado tipoDeLenguage;
+    private LenguajeMarcado tipoDeLenguage;
 
-    public FuentesDeMarcado(String nombre, String ubicacion, LenguageMarcado tipoDeLenguage, int pesoArchivoKB) {
+    public FuenteDeMarcado(String nombre, String ubicacion, LenguajeMarcado tipoDeLenguage, int pesoArchivoKB) {
         super(nombre, ubicacion);
         this.pesoArchivoKB = pesoArchivoKB;
         this.tipoDeLenguage = tipoDeLenguage;

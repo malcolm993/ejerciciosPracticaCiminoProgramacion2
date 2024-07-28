@@ -18,15 +18,15 @@ public class Principal {
         //fuentes de Programacion 
         
         
-        FuentesDeProgramacion fp1 = new FuentesDeProgramacion("ABC123", "DESKTOP", LenguageProgra.JAVA);
-        FuentesDeProgramacion fp2 = new FuentesDeProgramacion("DEF987", "DOCUMENTOS", LenguageProgra.JAVASCRIPT);
-        FuentesDeProgramacion fp3 = new FuentesDeProgramacion("JKL", "DESCARGAS", LenguageProgra.CSHARP);
+        FuenteDeProgramacion fp1 = new FuenteDeProgramacion("ABC123", "DESKTOP", LenguajeProgra.JAVA);
+        FuenteDeProgramacion fp2 = new FuenteDeProgramacion("DEF987", "DOCUMENTOS", LenguajeProgra.JAVASCRIPT);
+        FuenteDeProgramacion fp3 = new FuenteDeProgramacion("JKL", "DESCARGAS", LenguajeProgra.CSHARP);
         
         //fuentes de marcado
         
-        FuentesDeMarcado fm1 = new FuentesDeMarcado("987EFG", "DOCUMENTOS", LenguageMarcado.HTML, 50);
-        FuentesDeMarcado fm2 = new FuentesDeMarcado("456HIJ", "DESKTOP", LenguageMarcado.XML, 90);
-        FuentesDeMarcado fm3  = new FuentesDeMarcado("963XYZ", "DOCUMENTOS", LenguageMarcado.HTML, 75);
+        FuenteDeMarcado fm1 = new FuenteDeMarcado("987EFG", "DOCUMENTOS", LenguajeMarcado.HTML, 50);
+        FuenteDeMarcado fm2 = new FuenteDeMarcado("456HIJ", "DESKTOP", LenguajeMarcado.XML, 90);
+        FuenteDeMarcado fm3  = new FuenteDeMarcado("963XYZ", "DOCUMENTOS", LenguajeMarcado.HTML, 75);
         
         // programas
         Programa p1 = new Programa("1", "Oximoron", "carlos", false);

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 * Código generado por la app UXFtoJava by Charly Cimino
 * @see https://github.com/CharlyCimino/uxf-to-java
 */
-public class Programa implements Calificables{
+public class Programa implements Calificable{
 
     private String id;
     private String nombrePrograma;
@@ -71,9 +71,9 @@ public class Programa implements Calificables{
         Metodo encontrado = null;
         while (cont < listaDeFuentesDePrograma.size() & encontrado == null){
             Fuente aux = listaDeFuentesDePrograma.get(cont);
-            if (aux instanceof FuentesDeProgramacion){
+            if (aux instanceof FuenteDeProgramacion){
                 
-                encontrado = ((FuentesDeProgramacion) aux).busquedaMetodo(nombreMetodoBuscado);
+                encontrado = ((FuenteDeProgramacion) aux).busquedaMetodo(nombreMetodoBuscado);
                 System.out.println(encontrado);
             }
             cont++;
