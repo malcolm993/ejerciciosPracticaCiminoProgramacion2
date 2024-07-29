@@ -1,0 +1,70 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>40</x><y>210</y><w>140</w><h>120</h></coordinates><panel_attributes>FooParking
+--
+
+
+--
++obtenerInformeEstadoGarages(): ArrayList&lt;Garage&gt;
++mostrarVehiculoSinLlave():void
++esPersonaAutorizada (String): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>210</y><w>190</w><h>120</h></coordinates><panel_attributes>Garage
+--
+-codigoAlfanumerico: String
+
+
+--
++estacionarVehiculo(String patente): EstadoVehiculo</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>200</y><w>190</w><h>120</h></coordinates><panel_attributes>Vehiculo
+--
+-patente:String
+
+
+--
+
++getMesesAdeudados():int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>270</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+-vehiculosRetirados
+</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>240</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+-vehiculosEstacionados</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>560</y><w>190</w><h>120</h></coordinates><panel_attributes>Llave
+--
+-etiquetaPatente : String
+-estaEnTablero: boolean
+
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>540</y><w>270</w><h>120</h></coordinates><panel_attributes>Tablero
+--
+
+
+
+--
++devolverLlave(String patente): Llave</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>570</y><w>290</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+-listaDeLlave</panel_attributes><additional_attributes>270;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>310</y><w>60</w><h>270</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-llave</panel_attributes><additional_attributes>10;250;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1040</x><y>200</y><w>190</w><h>120</h></coordinates><panel_attributes>Persona
+--
+-dni:String
+-nombreCompleto: String
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>230</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+-personasAutorizadas</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>240</y><w>190</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=*
+-listaDeGarages</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>350</y><w>270</w><h>120</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+EstadoVehiculo
+--
+VEHICULO_NO_HABILITADO
+VEHICULO_YA_ESTACIONADO
+NO_ESTACIONA_ADEUDA
+INGRESO_OK
+
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>320</y><w>110</w><h>120</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>90;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>320</y><w>150</w><h>240</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-tablero</panel_attributes><additional_attributes>10;220;130;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>30</y><w>250</w><h>120</h></coordinates><panel_attributes>Informe
+--
+-codigoGarage: String
+-cantVehiculosEstacionados: int
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>140</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element></diagram>
